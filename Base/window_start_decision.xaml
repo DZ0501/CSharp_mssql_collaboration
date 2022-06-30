@@ -1,0 +1,15 @@
+﻿<Window x:Class="Base.window_start_decision"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Base"
+        mc:Ignorable="d"
+        Title="Dating App" Height="450" Width="800">
+    <Grid>
+        <Button Content="Women" Margin="259,56,259,272" FontFamily="Times New Roman" FontSize="72" Click="Button_Click"/>
+        <Button Content="Men" Margin="259,272,259,56" FontFamily="Times New Roman" FontSize="72" Click="Button_Click"/>
+        <Label Content="Hello! Choose the gender you want to date!" Margin="157,176" FontFamily="Times New Roman" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+
+    </Grid>
+</Window>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="e80c503bf96b489f9b55dcea4debb126" Name="Diagram1">
+        <EntityTypeShape EntityType="dating_app_database_model.alkohol" Width="1.5" PointX="0.75" PointY="10.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="dating_app_database_model.firma" Width="1.5" PointX="0.75" PointY="13.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="dating_app_database_model.gatunek" Width="1.5" PointX="1.5" PointY="32.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="dating_app_database_model.kobieta" Width="1.5" PointX="3" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="dating_app_database_model.mezczyzna" Width="1.5" PointX="6" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="dating_app_database_model.papierosy" Width="1.5" PointX="0.75" PointY="16.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="dating_app_database_model.placowka" Width="1.5" PointX="3" PointY="23.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="dating_app_database_model.religia" Width="1.5" PointX="0.75" PointY="19" IsExpanded="true" />
+        <EntityTypeShape EntityType="dating_app_database_model.status_zwiazku" Width="1.5" PointX="0.75" PointY="21.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="dating_app_database_model.wyksztalcenie" Width="1.5" PointX="0.75" PointY="24.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="dating_app_database_model.zainteresowanie" Width="1.5" PointX="0.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dating_app_database_model.znak_zodiaku" Width="1.5" PointX="0.75" PointY="26.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dating_app_database_model.zwierzatko" Width="1.5" PointX="0.75" PointY="29.375" IsExpanded="true" />
+        <AssociationConnector Association="dating_app_database_model.FK__kobieta__alkohol__628FA481" ManuallyRouted="false" />
+        <AssociationConnector Association="dating_app_database_model.FK__mezczyzna__alkoh__5629CD9C" ManuallyRouted="false" />
+        <AssociationConnector Association="dating_app_database_model.FK__kobieta__firma_I__5DCAEF64" ManuallyRouted="false" />
+        <AssociationConnector Association="dating_app_database_model.FK__mezczyzna__firma__5165187F" ManuallyRouted="false" />
+        <AssociationConnector Association="dating_app_database_model.FK__zwierzatk__Gatun__4316F928" ManuallyRouted="false" />
+        <AssociationConnector Association="dating_app_database_model.FK__kobieta__papiero__6383C8BA" ManuallyRouted="false" />
+        <AssociationConnector Association="dating_app_database_model.FK__kobieta__religia__619B8048" ManuallyRouted="false" />
+        <AssociationConnector Association="dating_app_database_model.FK__kobieta__status___5CD6CB2B" ManuallyRouted="false" />
+        <AssociationConnector Association="dating_app_database_model.FK__kobieta__wykszta__5FB337D6" ManuallyRouted="false" />
+        <AssociationConnector Association="dating_app_database_model.FK__kobieta__Zainter__59FA5E80" ManuallyRouted="false" />
+        <AssociationConnector Association="dating_app_database_model.FK__kobieta__Zainter__5AEE82B9" ManuallyRouted="false" />
+        <AssociationConnector Association="dating_app_database_model.FK__kobieta__Zainter__5BE2A6F2" ManuallyRouted="false" />
+        <AssociationConnector Association="dating_app_database_model.FK__kobieta__znak_zo__5EBF139D" ManuallyRouted="false" />
+        <AssociationConnector Association="dating_app_database_model.FK__kobieta__zwierza__60A75C0F" ManuallyRouted="false" />
+        <AssociationConnector Association="dating_app_database_model.FK__mezczyzna__papie__571DF1D5" ManuallyRouted="false" />
+        <AssociationConnector Association="dating_app_database_model.FK__mezczyzna__relig__5535A963" ManuallyRouted="false" />
+        <AssociationConnector Association="dating_app_database_model.FK__mezczyzna__statu__5070F446" ManuallyRouted="false" />
+        <AssociationConnector Association="dating_app_database_model.FK__mezczyzna__wyksz__534D60F1" ManuallyRouted="false" />
+        <AssociationConnector Association="dating_app_database_model.FK__mezczyzna__Zaint__4D94879B" ManuallyRouted="false" />
+        <AssociationConnector Association="dating_app_database_model.FK__mezczyzna__Zaint__4E88ABD4" ManuallyRouted="false" />
+        <AssociationConnector Association="dating_app_database_model.FK__mezczyzna__Zaint__4F7CD00D" ManuallyRouted="false" />
+        <AssociationConnector Association="dating_app_database_model.FK__mezczyzna__znak___52593CB8" ManuallyRouted="false" />
+        <AssociationConnector Association="dating_app_database_model.FK__mezczyzna__zwier__5441852A" ManuallyRouted="false" />
+        <AssociationConnector Association="dating_app_database_model.FK__placowka__wykszt__3E52440B" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

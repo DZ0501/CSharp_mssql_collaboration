@@ -1,0 +1,1499 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="dating_app_database_model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="alkohol">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="tinyint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Typ" Type="varchar" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="firma">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="tinyint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Nazwa" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="NIP" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="KodPocztowy" Type="nvarchar" MaxLength="20" />
+          <Property Name="Miasto" Type="nvarchar" MaxLength="30" />
+          <Property Name="Adres" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="gatunek">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="tinyint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Nazwa" Type="nvarchar" MaxLength="20" Nullable="false" />
+        </EntityType>
+        <EntityType Name="kobieta">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="tinyint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Imie" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Nazwisko" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Wiek" Type="tinyint" Nullable="false" />
+          <Property Name="Miejscowosc" Type="nvarchar" MaxLength="30" Nullable="false" />
+          <Property Name="Zainteresowanie_1" Type="tinyint" />
+          <Property Name="Zainteresowanie_2" Type="tinyint" />
+          <Property Name="Zainteresowanie_3" Type="tinyint" />
+          <Property Name="status_zwiazku_ID" Type="tinyint" />
+          <Property Name="firma_ID" Type="tinyint" />
+          <Property Name="znak_zodiaku_ID" Type="tinyint" />
+          <Property Name="wyksztalcenie_ID" Type="tinyint" />
+          <Property Name="zwierzatko_ID" Type="tinyint" />
+          <Property Name="religia_ID" Type="tinyint" />
+          <Property Name="alkohol_ID" Type="tinyint" />
+          <Property Name="papierosy_ID" Type="tinyint" />
+        </EntityType>
+        <EntityType Name="mezczyzna">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="tinyint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Imie" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Nazwisko" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Wiek" Type="tinyint" Nullable="false" />
+          <Property Name="Miejscowosc" Type="nvarchar" MaxLength="30" Nullable="false" />
+          <Property Name="Zainteresowanie_1" Type="tinyint" />
+          <Property Name="Zainteresowanie_2" Type="tinyint" />
+          <Property Name="Zainteresowanie_3" Type="tinyint" />
+          <Property Name="status_zwiazku_ID" Type="tinyint" />
+          <Property Name="firma_ID" Type="tinyint" />
+          <Property Name="znak_zodiaku_ID" Type="tinyint" />
+          <Property Name="wyksztalcenie_ID" Type="tinyint" />
+          <Property Name="zwierzatko_ID" Type="tinyint" />
+          <Property Name="religia_ID" Type="tinyint" />
+          <Property Name="alkohol_ID" Type="tinyint" />
+          <Property Name="papierosy_ID" Type="tinyint" />
+        </EntityType>
+        <EntityType Name="papierosy">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="tinyint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Typ" Type="varchar" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="placowka">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="tinyint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Nazwa" Type="nvarchar" MaxLength="100" />
+          <Property Name="wyksztalcenie_ID" Type="tinyint" />
+          <Property Name="KodPocztowy" Type="nvarchar" MaxLength="20" />
+          <Property Name="Miasto" Type="nvarchar" MaxLength="30" />
+          <Property Name="Adres" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="religia">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="tinyint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Nazwa" Type="nvarchar" MaxLength="20" Nullable="false" />
+        </EntityType>
+        <EntityType Name="status_zwiazku">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="tinyint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Rodzaj" Type="nvarchar" MaxLength="20" Nullable="false" />
+        </EntityType>
+        <EntityType Name="wyksztalcenie">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="tinyint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Rodzaj" Type="nvarchar" MaxLength="20" Nullable="false" />
+        </EntityType>
+        <EntityType Name="zainteresowanie">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="tinyint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Nazwa" Type="nvarchar" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="znak_zodiaku">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="tinyint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Nazwa" Type="nvarchar" MaxLength="20" Nullable="false" />
+        </EntityType>
+        <EntityType Name="zwierzatko">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="tinyint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Gatunek_ID" Type="tinyint" />
+          <Property Name="Imie" Type="nvarchar" MaxLength="20" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6013: The table/view 'C:\USERS\S\SOURCE\REPOS\CSHARP_MSSQL_COLLABORATION\BASE\DATING_APP_DATABASE.MDF.dbo.animal_info' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="animal_info">
+          <Property Name="Imie" Type="nvarchar" MaxLength="20" />
+          <Property Name="Nazwa" Type="nvarchar" MaxLength="20" />
+          <Property Name="Gatunek_ID" Type="tinyint" />
+        </EntityType>-->
+        <!--Errors Found During Generation:
+warning 6013: The table/view 'C:\USERS\S\SOURCE\REPOS\CSHARP_MSSQL_COLLABORATION\BASE\DATING_APP_DATABASE.MDF.dbo.count_education' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="count_education">
+          <Property Name="Rodzaj" Type="nvarchar" MaxLength="20" />
+          <Property Name="policz" Type="int" />
+        </EntityType>-->
+        <Association Name="FK__kobieta__alkohol__628FA481">
+          <End Role="alkohol" Type="Self.alkohol" Multiplicity="0..1" />
+          <End Role="kobieta" Type="Self.kobieta" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="alkohol">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="kobieta">
+              <PropertyRef Name="alkohol_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__kobieta__firma_I__5DCAEF64">
+          <End Role="firma" Type="Self.firma" Multiplicity="0..1" />
+          <End Role="kobieta" Type="Self.kobieta" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="firma">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="kobieta">
+              <PropertyRef Name="firma_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__kobieta__papiero__6383C8BA">
+          <End Role="papierosy" Type="Self.papierosy" Multiplicity="0..1" />
+          <End Role="kobieta" Type="Self.kobieta" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="papierosy">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="kobieta">
+              <PropertyRef Name="papierosy_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__kobieta__religia__619B8048">
+          <End Role="religia" Type="Self.religia" Multiplicity="0..1" />
+          <End Role="kobieta" Type="Self.kobieta" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="religia">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="kobieta">
+              <PropertyRef Name="religia_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__kobieta__status___5CD6CB2B">
+          <End Role="status_zwiazku" Type="Self.status_zwiazku" Multiplicity="0..1" />
+          <End Role="kobieta" Type="Self.kobieta" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="status_zwiazku">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="kobieta">
+              <PropertyRef Name="status_zwiazku_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__kobieta__wykszta__5FB337D6">
+          <End Role="wyksztalcenie" Type="Self.wyksztalcenie" Multiplicity="0..1" />
+          <End Role="kobieta" Type="Self.kobieta" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="wyksztalcenie">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="kobieta">
+              <PropertyRef Name="wyksztalcenie_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__kobieta__Zainter__59FA5E80">
+          <End Role="zainteresowanie" Type="Self.zainteresowanie" Multiplicity="0..1" />
+          <End Role="kobieta" Type="Self.kobieta" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="zainteresowanie">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="kobieta">
+              <PropertyRef Name="Zainteresowanie_1" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__kobieta__Zainter__5AEE82B9">
+          <End Role="zainteresowanie" Type="Self.zainteresowanie" Multiplicity="0..1" />
+          <End Role="kobieta" Type="Self.kobieta" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="zainteresowanie">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="kobieta">
+              <PropertyRef Name="Zainteresowanie_2" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__kobieta__Zainter__5BE2A6F2">
+          <End Role="zainteresowanie" Type="Self.zainteresowanie" Multiplicity="0..1" />
+          <End Role="kobieta" Type="Self.kobieta" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="zainteresowanie">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="kobieta">
+              <PropertyRef Name="Zainteresowanie_3" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__kobieta__znak_zo__5EBF139D">
+          <End Role="znak_zodiaku" Type="Self.znak_zodiaku" Multiplicity="0..1" />
+          <End Role="kobieta" Type="Self.kobieta" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="znak_zodiaku">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="kobieta">
+              <PropertyRef Name="znak_zodiaku_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__kobieta__zwierza__60A75C0F">
+          <End Role="zwierzatko" Type="Self.zwierzatko" Multiplicity="0..1" />
+          <End Role="kobieta" Type="Self.kobieta" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="zwierzatko">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="kobieta">
+              <PropertyRef Name="zwierzatko_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__mezczyzna__alkoh__5629CD9C">
+          <End Role="alkohol" Type="Self.alkohol" Multiplicity="0..1" />
+          <End Role="mezczyzna" Type="Self.mezczyzna" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="alkohol">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="mezczyzna">
+              <PropertyRef Name="alkohol_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__mezczyzna__firma__5165187F">
+          <End Role="firma" Type="Self.firma" Multiplicity="0..1" />
+          <End Role="mezczyzna" Type="Self.mezczyzna" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="firma">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="mezczyzna">
+              <PropertyRef Name="firma_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__mezczyzna__papie__571DF1D5">
+          <End Role="papierosy" Type="Self.papierosy" Multiplicity="0..1" />
+          <End Role="mezczyzna" Type="Self.mezczyzna" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="papierosy">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="mezczyzna">
+              <PropertyRef Name="papierosy_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__mezczyzna__relig__5535A963">
+          <End Role="religia" Type="Self.religia" Multiplicity="0..1" />
+          <End Role="mezczyzna" Type="Self.mezczyzna" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="religia">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="mezczyzna">
+              <PropertyRef Name="religia_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__mezczyzna__statu__5070F446">
+          <End Role="status_zwiazku" Type="Self.status_zwiazku" Multiplicity="0..1" />
+          <End Role="mezczyzna" Type="Self.mezczyzna" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="status_zwiazku">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="mezczyzna">
+              <PropertyRef Name="status_zwiazku_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__mezczyzna__wyksz__534D60F1">
+          <End Role="wyksztalcenie" Type="Self.wyksztalcenie" Multiplicity="0..1" />
+          <End Role="mezczyzna" Type="Self.mezczyzna" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="wyksztalcenie">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="mezczyzna">
+              <PropertyRef Name="wyksztalcenie_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__mezczyzna__Zaint__4D94879B">
+          <End Role="zainteresowanie" Type="Self.zainteresowanie" Multiplicity="0..1" />
+          <End Role="mezczyzna" Type="Self.mezczyzna" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="zainteresowanie">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="mezczyzna">
+              <PropertyRef Name="Zainteresowanie_1" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__mezczyzna__Zaint__4E88ABD4">
+          <End Role="zainteresowanie" Type="Self.zainteresowanie" Multiplicity="0..1" />
+          <End Role="mezczyzna" Type="Self.mezczyzna" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="zainteresowanie">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="mezczyzna">
+              <PropertyRef Name="Zainteresowanie_2" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__mezczyzna__Zaint__4F7CD00D">
+          <End Role="zainteresowanie" Type="Self.zainteresowanie" Multiplicity="0..1" />
+          <End Role="mezczyzna" Type="Self.mezczyzna" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="zainteresowanie">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="mezczyzna">
+              <PropertyRef Name="Zainteresowanie_3" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__mezczyzna__znak___52593CB8">
+          <End Role="znak_zodiaku" Type="Self.znak_zodiaku" Multiplicity="0..1" />
+          <End Role="mezczyzna" Type="Self.mezczyzna" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="znak_zodiaku">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="mezczyzna">
+              <PropertyRef Name="znak_zodiaku_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__mezczyzna__zwier__5441852A">
+          <End Role="zwierzatko" Type="Self.zwierzatko" Multiplicity="0..1" />
+          <End Role="mezczyzna" Type="Self.mezczyzna" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="zwierzatko">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="mezczyzna">
+              <PropertyRef Name="zwierzatko_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__placowka__wykszt__3E52440B">
+          <End Role="wyksztalcenie" Type="Self.wyksztalcenie" Multiplicity="0..1" />
+          <End Role="placowka" Type="Self.placowka" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="wyksztalcenie">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="placowka">
+              <PropertyRef Name="wyksztalcenie_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__zwierzatk__Gatun__4316F928">
+          <End Role="gatunek" Type="Self.gatunek" Multiplicity="0..1" />
+          <End Role="zwierzatko" Type="Self.zwierzatko" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="gatunek">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="zwierzatko">
+              <PropertyRef Name="Gatunek_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Function Name="BusinessAdd" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Nazwa" Type="nvarchar" Mode="In" />
+          <Parameter Name="NIP" Type="varchar" Mode="In" />
+          <Parameter Name="KodPocztowy" Type="nvarchar" Mode="In" />
+          <Parameter Name="Miasto" Type="nvarchar" Mode="In" />
+          <Parameter Name="Adres" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="FreeGuysFromCracow" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ZwiazekID" Type="tinyint" Mode="In" />
+          <Parameter Name="ZamieszkanieNazwa" Type="nvarchar" Mode="In" />
+          <ReturnType>
+            <CollectionType>
+              <RowType>
+                <Property Name="Imie" Type="nvarchar" MaxLength="20" Nullable="false" />
+                <Property Name="Nazwisko" Type="nvarchar" MaxLength="20" Nullable="false" />
+                <Property Name="Miejscowosc" Type="nvarchar" MaxLength="30" Nullable="false" />
+                <Property Name="Rodzaj" Type="nvarchar" MaxLength="20" Nullable="false" />
+                <Property Name="ID" Type="tinyint" Nullable="false" />
+              </RowType>
+            </CollectionType>
+          </ReturnType>
+        </Function>
+        <Function Name="ManAdd" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Imie" Type="nvarchar" Mode="In" />
+          <Parameter Name="Nazwisko" Type="nvarchar" Mode="In" />
+          <Parameter Name="Wiek" Type="tinyint" Mode="In" />
+          <Parameter Name="Miejscowosc" Type="nvarchar" Mode="In" />
+          <Parameter Name="Zainteresowanie_1" Type="tinyint" Mode="In" />
+          <Parameter Name="Zainteresowanie_2" Type="tinyint" Mode="In" />
+          <Parameter Name="Zainteresowanie_3" Type="tinyint" Mode="In" />
+          <Parameter Name="status_zwiazku_ID" Type="tinyint" Mode="In" />
+          <Parameter Name="firma_ID" Type="tinyint" Mode="In" />
+          <Parameter Name="znak_zodiaku_ID" Type="tinyint" Mode="In" />
+          <Parameter Name="wyksztalcenie_ID" Type="tinyint" Mode="In" />
+          <Parameter Name="zwierzatko_ID" Type="tinyint" Mode="In" />
+          <Parameter Name="religia_ID" Type="tinyint" Mode="In" />
+          <Parameter Name="alkohol_ID" Type="tinyint" Mode="In" />
+          <Parameter Name="papierosy_ID" Type="tinyint" Mode="In" />
+        </Function>
+        <Function Name="ShowZodiacSignOfMen" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ZodiakNazwa" Type="nvarchar" Mode="In" />
+          <ReturnType>
+            <CollectionType>
+              <RowType>
+                <Property Name="Imie" Type="nvarchar" MaxLength="20" Nullable="false" />
+                <Property Name="Nazwisko" Type="nvarchar" MaxLength="20" Nullable="false" />
+                <Property Name="ID" Type="tinyint" Nullable="false" />
+                <Property Name="Nazwa" Type="nvarchar" MaxLength="20" Nullable="false" />
+              </RowType>
+            </CollectionType>
+          </ReturnType>
+        </Function>
+        <Function Name="UserList" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Imie" Type="nvarchar" Mode="In" />
+          <Parameter Name="Nazwisko" Type="nvarchar" Mode="In" />
+          <Parameter Name="Liczba" Type="int" Mode="InOut" />
+        </Function>
+        <Function Name="WomenFirstInterest" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ZainteresowanieNazwa" Type="nvarchar" Mode="In" />
+          <ReturnType>
+            <CollectionType>
+              <RowType>
+                <Property Name="Imie" Type="nvarchar" MaxLength="20" Nullable="false" />
+                <Property Name="Nazwisko" Type="nvarchar" MaxLength="20" Nullable="false" />
+                <Property Name="Zainteresowanie_1" Type="tinyint" />
+                <Property Name="Nazwa" Type="nvarchar" MaxLength="20" />
+              </RowType>
+            </CollectionType>
+          </ReturnType>
+        </Function>
+        <EntityContainer Name="dating_app_database_modelStoreContainer">
+          <EntitySet Name="alkohol" EntityType="Self.alkohol" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="firma" EntityType="Self.firma" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="gatunek" EntityType="Self.gatunek" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="kobieta" EntityType="Self.kobieta" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="mezczyzna" EntityType="Self.mezczyzna" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="papierosy" EntityType="Self.papierosy" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="placowka" EntityType="Self.placowka" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="religia" EntityType="Self.religia" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="status_zwiazku" EntityType="Self.status_zwiazku" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="wyksztalcenie" EntityType="Self.wyksztalcenie" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="zainteresowanie" EntityType="Self.zainteresowanie" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="znak_zodiaku" EntityType="Self.znak_zodiaku" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="zwierzatko" EntityType="Self.zwierzatko" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK__kobieta__alkohol__628FA481" Association="Self.FK__kobieta__alkohol__628FA481">
+            <End Role="alkohol" EntitySet="alkohol" />
+            <End Role="kobieta" EntitySet="kobieta" />
+          </AssociationSet>
+          <AssociationSet Name="FK__kobieta__firma_I__5DCAEF64" Association="Self.FK__kobieta__firma_I__5DCAEF64">
+            <End Role="firma" EntitySet="firma" />
+            <End Role="kobieta" EntitySet="kobieta" />
+          </AssociationSet>
+          <AssociationSet Name="FK__kobieta__papiero__6383C8BA" Association="Self.FK__kobieta__papiero__6383C8BA">
+            <End Role="papierosy" EntitySet="papierosy" />
+            <End Role="kobieta" EntitySet="kobieta" />
+          </AssociationSet>
+          <AssociationSet Name="FK__kobieta__religia__619B8048" Association="Self.FK__kobieta__religia__619B8048">
+            <End Role="religia" EntitySet="religia" />
+            <End Role="kobieta" EntitySet="kobieta" />
+          </AssociationSet>
+          <AssociationSet Name="FK__kobieta__status___5CD6CB2B" Association="Self.FK__kobieta__status___5CD6CB2B">
+            <End Role="status_zwiazku" EntitySet="status_zwiazku" />
+            <End Role="kobieta" EntitySet="kobieta" />
+          </AssociationSet>
+          <AssociationSet Name="FK__kobieta__wykszta__5FB337D6" Association="Self.FK__kobieta__wykszta__5FB337D6">
+            <End Role="wyksztalcenie" EntitySet="wyksztalcenie" />
+            <End Role="kobieta" EntitySet="kobieta" />
+          </AssociationSet>
+          <AssociationSet Name="FK__kobieta__Zainter__59FA5E80" Association="Self.FK__kobieta__Zainter__59FA5E80">
+            <End Role="zainteresowanie" EntitySet="zainteresowanie" />
+            <End Role="kobieta" EntitySet="kobieta" />
+          </AssociationSet>
+          <AssociationSet Name="FK__kobieta__Zainter__5AEE82B9" Association="Self.FK__kobieta__Zainter__5AEE82B9">
+            <End Role="zainteresowanie" EntitySet="zainteresowanie" />
+            <End Role="kobieta" EntitySet="kobieta" />
+          </AssociationSet>
+          <AssociationSet Name="FK__kobieta__Zainter__5BE2A6F2" Association="Self.FK__kobieta__Zainter__5BE2A6F2">
+            <End Role="zainteresowanie" EntitySet="zainteresowanie" />
+            <End Role="kobieta" EntitySet="kobieta" />
+          </AssociationSet>
+          <AssociationSet Name="FK__kobieta__znak_zo__5EBF139D" Association="Self.FK__kobieta__znak_zo__5EBF139D">
+            <End Role="znak_zodiaku" EntitySet="znak_zodiaku" />
+            <End Role="kobieta" EntitySet="kobieta" />
+          </AssociationSet>
+          <AssociationSet Name="FK__kobieta__zwierza__60A75C0F" Association="Self.FK__kobieta__zwierza__60A75C0F">
+            <End Role="zwierzatko" EntitySet="zwierzatko" />
+            <End Role="kobieta" EntitySet="kobieta" />
+          </AssociationSet>
+          <AssociationSet Name="FK__mezczyzna__alkoh__5629CD9C" Association="Self.FK__mezczyzna__alkoh__5629CD9C">
+            <End Role="alkohol" EntitySet="alkohol" />
+            <End Role="mezczyzna" EntitySet="mezczyzna" />
+          </AssociationSet>
+          <AssociationSet Name="FK__mezczyzna__firma__5165187F" Association="Self.FK__mezczyzna__firma__5165187F">
+            <End Role="firma" EntitySet="firma" />
+            <End Role="mezczyzna" EntitySet="mezczyzna" />
+          </AssociationSet>
+          <AssociationSet Name="FK__mezczyzna__papie__571DF1D5" Association="Self.FK__mezczyzna__papie__571DF1D5">
+            <End Role="papierosy" EntitySet="papierosy" />
+            <End Role="mezczyzna" EntitySet="mezczyzna" />
+          </AssociationSet>
+          <AssociationSet Name="FK__mezczyzna__relig__5535A963" Association="Self.FK__mezczyzna__relig__5535A963">
+            <End Role="religia" EntitySet="religia" />
+            <End Role="mezczyzna" EntitySet="mezczyzna" />
+          </AssociationSet>
+          <AssociationSet Name="FK__mezczyzna__statu__5070F446" Association="Self.FK__mezczyzna__statu__5070F446">
+            <End Role="status_zwiazku" EntitySet="status_zwiazku" />
+            <End Role="mezczyzna" EntitySet="mezczyzna" />
+          </AssociationSet>
+          <AssociationSet Name="FK__mezczyzna__wyksz__534D60F1" Association="Self.FK__mezczyzna__wyksz__534D60F1">
+            <End Role="wyksztalcenie" EntitySet="wyksztalcenie" />
+            <End Role="mezczyzna" EntitySet="mezczyzna" />
+          </AssociationSet>
+          <AssociationSet Name="FK__mezczyzna__Zaint__4D94879B" Association="Self.FK__mezczyzna__Zaint__4D94879B">
+            <End Role="zainteresowanie" EntitySet="zainteresowanie" />
+            <End Role="mezczyzna" EntitySet="mezczyzna" />
+          </AssociationSet>
+          <AssociationSet Name="FK__mezczyzna__Zaint__4E88ABD4" Association="Self.FK__mezczyzna__Zaint__4E88ABD4">
+            <End Role="zainteresowanie" EntitySet="zainteresowanie" />
+            <End Role="mezczyzna" EntitySet="mezczyzna" />
+          </AssociationSet>
+          <AssociationSet Name="FK__mezczyzna__Zaint__4F7CD00D" Association="Self.FK__mezczyzna__Zaint__4F7CD00D">
+            <End Role="zainteresowanie" EntitySet="zainteresowanie" />
+            <End Role="mezczyzna" EntitySet="mezczyzna" />
+          </AssociationSet>
+          <AssociationSet Name="FK__mezczyzna__znak___52593CB8" Association="Self.FK__mezczyzna__znak___52593CB8">
+            <End Role="znak_zodiaku" EntitySet="znak_zodiaku" />
+            <End Role="mezczyzna" EntitySet="mezczyzna" />
+          </AssociationSet>
+          <AssociationSet Name="FK__mezczyzna__zwier__5441852A" Association="Self.FK__mezczyzna__zwier__5441852A">
+            <End Role="zwierzatko" EntitySet="zwierzatko" />
+            <End Role="mezczyzna" EntitySet="mezczyzna" />
+          </AssociationSet>
+          <AssociationSet Name="FK__placowka__wykszt__3E52440B" Association="Self.FK__placowka__wykszt__3E52440B">
+            <End Role="wyksztalcenie" EntitySet="wyksztalcenie" />
+            <End Role="placowka" EntitySet="placowka" />
+          </AssociationSet>
+          <AssociationSet Name="FK__zwierzatk__Gatun__4316F928" Association="Self.FK__zwierzatk__Gatun__4316F928">
+            <End Role="gatunek" EntitySet="gatunek" />
+            <End Role="zwierzatko" EntitySet="zwierzatko" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="dating_app_database_model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <ComplexType Name="FreeGuysFromCracow_Result">
+          <Property Name="Imie" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Nazwisko" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Miejscowosc" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Rodzaj" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ID" Type="Byte" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="ShowZodiacSignOfMen_Result">
+          <Property Name="Imie" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Nazwisko" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ID" Type="Byte" Nullable="false" />
+          <Property Name="Nazwa" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="WomenFirstInterest_Result">
+          <Property Name="Imie" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Nazwisko" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Zainteresowanie_1" Type="Byte" />
+          <Property Name="Nazwa" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+        </ComplexType>
+        <EntityType Name="alkohol">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Byte" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Typ" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="kobietas" Relationship="Self.FK__kobieta__alkohol__628FA481" FromRole="alkohol" ToRole="kobieta" />
+          <NavigationProperty Name="mezczyznas" Relationship="Self.FK__mezczyzna__alkoh__5629CD9C" FromRole="alkohol" ToRole="mezczyzna" />
+        </EntityType>
+        <EntityType Name="firma">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Byte" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Nazwa" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="NIP" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="KodPocztowy" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Miasto" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="Adres" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="kobietas" Relationship="Self.FK__kobieta__firma_I__5DCAEF64" FromRole="firma" ToRole="kobieta" />
+          <NavigationProperty Name="mezczyznas" Relationship="Self.FK__mezczyzna__firma__5165187F" FromRole="firma" ToRole="mezczyzna" />
+        </EntityType>
+        <EntityType Name="gatunek">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Byte" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Nazwa" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="zwierzatkoes" Relationship="Self.FK__zwierzatk__Gatun__4316F928" FromRole="gatunek" ToRole="zwierzatko" />
+        </EntityType>
+        <EntityType Name="kobieta">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Byte" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Imie" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Nazwisko" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Wiek" Type="Byte" Nullable="false" />
+          <Property Name="Miejscowosc" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Zainteresowanie_1" Type="Byte" />
+          <Property Name="Zainteresowanie_2" Type="Byte" />
+          <Property Name="Zainteresowanie_3" Type="Byte" />
+          <Property Name="status_zwiazku_ID" Type="Byte" />
+          <Property Name="firma_ID" Type="Byte" />
+          <Property Name="znak_zodiaku_ID" Type="Byte" />
+          <Property Name="wyksztalcenie_ID" Type="Byte" />
+          <Property Name="zwierzatko_ID" Type="Byte" />
+          <Property Name="religia_ID" Type="Byte" />
+          <Property Name="alkohol_ID" Type="Byte" />
+          <Property Name="papierosy_ID" Type="Byte" />
+          <NavigationProperty Name="alkohol" Relationship="Self.FK__kobieta__alkohol__628FA481" FromRole="kobieta" ToRole="alkohol" />
+          <NavigationProperty Name="firma" Relationship="Self.FK__kobieta__firma_I__5DCAEF64" FromRole="kobieta" ToRole="firma" />
+          <NavigationProperty Name="papierosy" Relationship="Self.FK__kobieta__papiero__6383C8BA" FromRole="kobieta" ToRole="papierosy" />
+          <NavigationProperty Name="religia" Relationship="Self.FK__kobieta__religia__619B8048" FromRole="kobieta" ToRole="religia" />
+          <NavigationProperty Name="status_zwiazku" Relationship="Self.FK__kobieta__status___5CD6CB2B" FromRole="kobieta" ToRole="status_zwiazku" />
+          <NavigationProperty Name="wyksztalcenie" Relationship="Self.FK__kobieta__wykszta__5FB337D6" FromRole="kobieta" ToRole="wyksztalcenie" />
+          <NavigationProperty Name="zainteresowanie" Relationship="Self.FK__kobieta__Zainter__59FA5E80" FromRole="kobieta" ToRole="zainteresowanie" />
+          <NavigationProperty Name="zainteresowanie1" Relationship="Self.FK__kobieta__Zainter__5AEE82B9" FromRole="kobieta" ToRole="zainteresowanie" />
+          <NavigationProperty Name="zainteresowanie2" Relationship="Self.FK__kobieta__Zainter__5BE2A6F2" FromRole="kobieta" ToRole="zainteresowanie" />
+          <NavigationProperty Name="znak_zodiaku" Relationship="Self.FK__kobieta__znak_zo__5EBF139D" FromRole="kobieta" ToRole="znak_zodiaku" />
+          <NavigationProperty Name="zwierzatko" Relationship="Self.FK__kobieta__zwierza__60A75C0F" FromRole="kobieta" ToRole="zwierzatko" />
+        </EntityType>
+        <EntityType Name="mezczyzna">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Byte" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Imie" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Nazwisko" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Wiek" Type="Byte" Nullable="false" />
+          <Property Name="Miejscowosc" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Zainteresowanie_1" Type="Byte" />
+          <Property Name="Zainteresowanie_2" Type="Byte" />
+          <Property Name="Zainteresowanie_3" Type="Byte" />
+          <Property Name="status_zwiazku_ID" Type="Byte" />
+          <Property Name="firma_ID" Type="Byte" />
+          <Property Name="znak_zodiaku_ID" Type="Byte" />
+          <Property Name="wyksztalcenie_ID" Type="Byte" />
+          <Property Name="zwierzatko_ID" Type="Byte" />
+          <Property Name="religia_ID" Type="Byte" />
+          <Property Name="alkohol_ID" Type="Byte" />
+          <Property Name="papierosy_ID" Type="Byte" />
+          <NavigationProperty Name="alkohol" Relationship="Self.FK__mezczyzna__alkoh__5629CD9C" FromRole="mezczyzna" ToRole="alkohol" />
+          <NavigationProperty Name="firma" Relationship="Self.FK__mezczyzna__firma__5165187F" FromRole="mezczyzna" ToRole="firma" />
+          <NavigationProperty Name="papierosy" Relationship="Self.FK__mezczyzna__papie__571DF1D5" FromRole="mezczyzna" ToRole="papierosy" />
+          <NavigationProperty Name="religia" Relationship="Self.FK__mezczyzna__relig__5535A963" FromRole="mezczyzna" ToRole="religia" />
+          <NavigationProperty Name="status_zwiazku" Relationship="Self.FK__mezczyzna__statu__5070F446" FromRole="mezczyzna" ToRole="status_zwiazku" />
+          <NavigationProperty Name="wyksztalcenie" Relationship="Self.FK__mezczyzna__wyksz__534D60F1" FromRole="mezczyzna" ToRole="wyksztalcenie" />
+          <NavigationProperty Name="zainteresowanie" Relationship="Self.FK__mezczyzna__Zaint__4D94879B" FromRole="mezczyzna" ToRole="zainteresowanie" />
+          <NavigationProperty Name="zainteresowanie1" Relationship="Self.FK__mezczyzna__Zaint__4E88ABD4" FromRole="mezczyzna" ToRole="zainteresowanie" />
+          <NavigationProperty Name="zainteresowanie2" Relationship="Self.FK__mezczyzna__Zaint__4F7CD00D" FromRole="mezczyzna" ToRole="zainteresowanie" />
+          <NavigationProperty Name="znak_zodiaku" Relationship="Self.FK__mezczyzna__znak___52593CB8" FromRole="mezczyzna" ToRole="znak_zodiaku" />
+          <NavigationProperty Name="zwierzatko" Relationship="Self.FK__mezczyzna__zwier__5441852A" FromRole="mezczyzna" ToRole="zwierzatko" />
+        </EntityType>
+        <EntityType Name="papierosy">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Byte" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Typ" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="kobietas" Relationship="Self.FK__kobieta__papiero__6383C8BA" FromRole="papierosy" ToRole="kobieta" />
+          <NavigationProperty Name="mezczyznas" Relationship="Self.FK__mezczyzna__papie__571DF1D5" FromRole="papierosy" ToRole="mezczyzna" />
+        </EntityType>
+        <EntityType Name="placowka">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Byte" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Nazwa" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="wyksztalcenie_ID" Type="Byte" />
+          <Property Name="KodPocztowy" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Miasto" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="Adres" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="wyksztalcenie" Relationship="Self.FK__placowka__wykszt__3E52440B" FromRole="placowka" ToRole="wyksztalcenie" />
+        </EntityType>
+        <EntityType Name="religia">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Byte" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Nazwa" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="kobietas" Relationship="Self.FK__kobieta__religia__619B8048" FromRole="religia" ToRole="kobieta" />
+          <NavigationProperty Name="mezczyznas" Relationship="Self.FK__mezczyzna__relig__5535A963" FromRole="religia" ToRole="mezczyzna" />
+        </EntityType>
+        <EntityType Name="status_zwiazku">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Byte" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Rodzaj" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="kobietas" Relationship="Self.FK__kobieta__status___5CD6CB2B" FromRole="status_zwiazku" ToRole="kobieta" />
+          <NavigationProperty Name="mezczyznas" Relationship="Self.FK__mezczyzna__statu__5070F446" FromRole="status_zwiazku" ToRole="mezczyzna" />
+        </EntityType>
+        <EntityType Name="wyksztalcenie">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Byte" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Rodzaj" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="kobietas" Relationship="Self.FK__kobieta__wykszta__5FB337D6" FromRole="wyksztalcenie" ToRole="kobieta" />
+          <NavigationProperty Name="mezczyznas" Relationship="Self.FK__mezczyzna__wyksz__534D60F1" FromRole="wyksztalcenie" ToRole="mezczyzna" />
+          <NavigationProperty Name="placowkas" Relationship="Self.FK__placowka__wykszt__3E52440B" FromRole="wyksztalcenie" ToRole="placowka" />
+        </EntityType>
+        <EntityType Name="zainteresowanie">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Byte" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Nazwa" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="kobietas" Relationship="Self.FK__kobieta__Zainter__59FA5E80" FromRole="zainteresowanie" ToRole="kobieta" />
+          <NavigationProperty Name="kobietas1" Relationship="Self.FK__kobieta__Zainter__5AEE82B9" FromRole="zainteresowanie" ToRole="kobieta" />
+          <NavigationProperty Name="kobietas2" Relationship="Self.FK__kobieta__Zainter__5BE2A6F2" FromRole="zainteresowanie" ToRole="kobieta" />
+          <NavigationProperty Name="mezczyznas" Relationship="Self.FK__mezczyzna__Zaint__4D94879B" FromRole="zainteresowanie" ToRole="mezczyzna" />
+          <NavigationProperty Name="mezczyznas1" Relationship="Self.FK__mezczyzna__Zaint__4E88ABD4" FromRole="zainteresowanie" ToRole="mezczyzna" />
+          <NavigationProperty Name="mezczyznas2" Relationship="Self.FK__mezczyzna__Zaint__4F7CD00D" FromRole="zainteresowanie" ToRole="mezczyzna" />
+        </EntityType>
+        <EntityType Name="znak_zodiaku">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Byte" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Nazwa" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="kobietas" Relationship="Self.FK__kobieta__znak_zo__5EBF139D" FromRole="znak_zodiaku" ToRole="kobieta" />
+          <NavigationProperty Name="mezczyznas" Relationship="Self.FK__mezczyzna__znak___52593CB8" FromRole="znak_zodiaku" ToRole="mezczyzna" />
+        </EntityType>
+        <EntityType Name="zwierzatko">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Byte" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Gatunek_ID" Type="Byte" />
+          <Property Name="Imie" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="gatunek" Relationship="Self.FK__zwierzatk__Gatun__4316F928" FromRole="zwierzatko" ToRole="gatunek" />
+          <NavigationProperty Name="kobietas" Relationship="Self.FK__kobieta__zwierza__60A75C0F" FromRole="zwierzatko" ToRole="kobieta" />
+          <NavigationProperty Name="mezczyznas" Relationship="Self.FK__mezczyzna__zwier__5441852A" FromRole="zwierzatko" ToRole="mezczyzna" />
+        </EntityType>
+        <Association Name="FK__kobieta__alkohol__628FA481">
+          <End Role="alkohol" Type="Self.alkohol" Multiplicity="0..1" />
+          <End Role="kobieta" Type="Self.kobieta" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="alkohol">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="kobieta">
+              <PropertyRef Name="alkohol_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__mezczyzna__alkoh__5629CD9C">
+          <End Role="alkohol" Type="Self.alkohol" Multiplicity="0..1" />
+          <End Role="mezczyzna" Type="Self.mezczyzna" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="alkohol">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="mezczyzna">
+              <PropertyRef Name="alkohol_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__kobieta__firma_I__5DCAEF64">
+          <End Role="firma" Type="Self.firma" Multiplicity="0..1" />
+          <End Role="kobieta" Type="Self.kobieta" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="firma">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="kobieta">
+              <PropertyRef Name="firma_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__mezczyzna__firma__5165187F">
+          <End Role="firma" Type="Self.firma" Multiplicity="0..1" />
+          <End Role="mezczyzna" Type="Self.mezczyzna" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="firma">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="mezczyzna">
+              <PropertyRef Name="firma_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__zwierzatk__Gatun__4316F928">
+          <End Role="gatunek" Type="Self.gatunek" Multiplicity="0..1" />
+          <End Role="zwierzatko" Type="Self.zwierzatko" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="gatunek">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="zwierzatko">
+              <PropertyRef Name="Gatunek_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__kobieta__papiero__6383C8BA">
+          <End Role="papierosy" Type="Self.papierosy" Multiplicity="0..1" />
+          <End Role="kobieta" Type="Self.kobieta" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="papierosy">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="kobieta">
+              <PropertyRef Name="papierosy_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__kobieta__religia__619B8048">
+          <End Role="religia" Type="Self.religia" Multiplicity="0..1" />
+          <End Role="kobieta" Type="Self.kobieta" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="religia">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="kobieta">
+              <PropertyRef Name="religia_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__kobieta__status___5CD6CB2B">
+          <End Role="status_zwiazku" Type="Self.status_zwiazku" Multiplicity="0..1" />
+          <End Role="kobieta" Type="Self.kobieta" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="status_zwiazku">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="kobieta">
+              <PropertyRef Name="status_zwiazku_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__kobieta__wykszta__5FB337D6">
+          <End Role="wyksztalcenie" Type="Self.wyksztalcenie" Multiplicity="0..1" />
+          <End Role="kobieta" Type="Self.kobieta" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="wyksztalcenie">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="kobieta">
+              <PropertyRef Name="wyksztalcenie_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__kobieta__Zainter__59FA5E80">
+          <End Role="zainteresowanie" Type="Self.zainteresowanie" Multiplicity="0..1" />
+          <End Role="kobieta" Type="Self.kobieta" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="zainteresowanie">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="kobieta">
+              <PropertyRef Name="Zainteresowanie_1" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__kobieta__Zainter__5AEE82B9">
+          <End Role="zainteresowanie" Type="Self.zainteresowanie" Multiplicity="0..1" />
+          <End Role="kobieta" Type="Self.kobieta" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="zainteresowanie">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="kobieta">
+              <PropertyRef Name="Zainteresowanie_2" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__kobieta__Zainter__5BE2A6F2">
+          <End Role="zainteresowanie" Type="Self.zainteresowanie" Multiplicity="0..1" />
+          <End Role="kobieta" Type="Self.kobieta" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="zainteresowanie">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="kobieta">
+              <PropertyRef Name="Zainteresowanie_3" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__kobieta__znak_zo__5EBF139D">
+          <End Role="znak_zodiaku" Type="Self.znak_zodiaku" Multiplicity="0..1" />
+          <End Role="kobieta" Type="Self.kobieta" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="znak_zodiaku">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="kobieta">
+              <PropertyRef Name="znak_zodiaku_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__kobieta__zwierza__60A75C0F">
+          <End Role="zwierzatko" Type="Self.zwierzatko" Multiplicity="0..1" />
+          <End Role="kobieta" Type="Self.kobieta" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="zwierzatko">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="kobieta">
+              <PropertyRef Name="zwierzatko_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__mezczyzna__papie__571DF1D5">
+          <End Role="papierosy" Type="Self.papierosy" Multiplicity="0..1" />
+          <End Role="mezczyzna" Type="Self.mezczyzna" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="papierosy">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="mezczyzna">
+              <PropertyRef Name="papierosy_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__mezczyzna__relig__5535A963">
+          <End Role="religia" Type="Self.religia" Multiplicity="0..1" />
+          <End Role="mezczyzna" Type="Self.mezczyzna" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="religia">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="mezczyzna">
+              <PropertyRef Name="religia_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__mezczyzna__statu__5070F446">
+          <End Role="status_zwiazku" Type="Self.status_zwiazku" Multiplicity="0..1" />
+          <End Role="mezczyzna" Type="Self.mezczyzna" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="status_zwiazku">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="mezczyzna">
+              <PropertyRef Name="status_zwiazku_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__mezczyzna__wyksz__534D60F1">
+          <End Role="wyksztalcenie" Type="Self.wyksztalcenie" Multiplicity="0..1" />
+          <End Role="mezczyzna" Type="Self.mezczyzna" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="wyksztalcenie">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="mezczyzna">
+              <PropertyRef Name="wyksztalcenie_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__mezczyzna__Zaint__4D94879B">
+          <End Role="zainteresowanie" Type="Self.zainteresowanie" Multiplicity="0..1" />
+          <End Role="mezczyzna" Type="Self.mezczyzna" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="zainteresowanie">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="mezczyzna">
+              <PropertyRef Name="Zainteresowanie_1" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__mezczyzna__Zaint__4E88ABD4">
+          <End Role="zainteresowanie" Type="Self.zainteresowanie" Multiplicity="0..1" />
+          <End Role="mezczyzna" Type="Self.mezczyzna" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="zainteresowanie">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="mezczyzna">
+              <PropertyRef Name="Zainteresowanie_2" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__mezczyzna__Zaint__4F7CD00D">
+          <End Role="zainteresowanie" Type="Self.zainteresowanie" Multiplicity="0..1" />
+          <End Role="mezczyzna" Type="Self.mezczyzna" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="zainteresowanie">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="mezczyzna">
+              <PropertyRef Name="Zainteresowanie_3" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__mezczyzna__znak___52593CB8">
+          <End Role="znak_zodiaku" Type="Self.znak_zodiaku" Multiplicity="0..1" />
+          <End Role="mezczyzna" Type="Self.mezczyzna" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="znak_zodiaku">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="mezczyzna">
+              <PropertyRef Name="znak_zodiaku_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__mezczyzna__zwier__5441852A">
+          <End Role="zwierzatko" Type="Self.zwierzatko" Multiplicity="0..1" />
+          <End Role="mezczyzna" Type="Self.mezczyzna" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="zwierzatko">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="mezczyzna">
+              <PropertyRef Name="zwierzatko_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__placowka__wykszt__3E52440B">
+          <End Role="wyksztalcenie" Type="Self.wyksztalcenie" Multiplicity="0..1" />
+          <End Role="placowka" Type="Self.placowka" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="wyksztalcenie">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="placowka">
+              <PropertyRef Name="wyksztalcenie_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="dating_app_databaseEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="alkohols" EntityType="Self.alkohol" />
+          <EntitySet Name="firmas" EntityType="Self.firma" />
+          <EntitySet Name="gatuneks" EntityType="Self.gatunek" />
+          <EntitySet Name="kobietas" EntityType="Self.kobieta" />
+          <EntitySet Name="mezczyznas" EntityType="Self.mezczyzna" />
+          <EntitySet Name="papierosies" EntityType="Self.papierosy" />
+          <EntitySet Name="placowkas" EntityType="Self.placowka" />
+          <EntitySet Name="religias" EntityType="Self.religia" />
+          <EntitySet Name="status_zwiazku" EntityType="Self.status_zwiazku" />
+          <EntitySet Name="wyksztalcenies" EntityType="Self.wyksztalcenie" />
+          <EntitySet Name="zainteresowanies" EntityType="Self.zainteresowanie" />
+          <EntitySet Name="znak_zodiaku" EntityType="Self.znak_zodiaku" />
+          <EntitySet Name="zwierzatkoes" EntityType="Self.zwierzatko" />
+          <AssociationSet Name="FK__kobieta__alkohol__628FA481" Association="Self.FK__kobieta__alkohol__628FA481">
+            <End Role="alkohol" EntitySet="alkohols" />
+            <End Role="kobieta" EntitySet="kobietas" />
+          </AssociationSet>
+          <AssociationSet Name="FK__mezczyzna__alkoh__5629CD9C" Association="Self.FK__mezczyzna__alkoh__5629CD9C">
+            <End Role="alkohol" EntitySet="alkohols" />
+            <End Role="mezczyzna" EntitySet="mezczyznas" />
+          </AssociationSet>
+          <AssociationSet Name="FK__kobieta__firma_I__5DCAEF64" Association="Self.FK__kobieta__firma_I__5DCAEF64">
+            <End Role="firma" EntitySet="firmas" />
+            <End Role="kobieta" EntitySet="kobietas" />
+          </AssociationSet>
+          <AssociationSet Name="FK__mezczyzna__firma__5165187F" Association="Self.FK__mezczyzna__firma__5165187F">
+            <End Role="firma" EntitySet="firmas" />
+            <End Role="mezczyzna" EntitySet="mezczyznas" />
+          </AssociationSet>
+          <AssociationSet Name="FK__zwierzatk__Gatun__4316F928" Association="Self.FK__zwierzatk__Gatun__4316F928">
+            <End Role="gatunek" EntitySet="gatuneks" />
+            <End Role="zwierzatko" EntitySet="zwierzatkoes" />
+          </AssociationSet>
+          <AssociationSet Name="FK__kobieta__papiero__6383C8BA" Association="Self.FK__kobieta__papiero__6383C8BA">
+            <End Role="papierosy" EntitySet="papierosies" />
+            <End Role="kobieta" EntitySet="kobietas" />
+          </AssociationSet>
+          <AssociationSet Name="FK__kobieta__religia__619B8048" Association="Self.FK__kobieta__religia__619B8048">
+            <End Role="religia" EntitySet="religias" />
+            <End Role="kobieta" EntitySet="kobietas" />
+          </AssociationSet>
+          <AssociationSet Name="FK__kobieta__status___5CD6CB2B" Association="Self.FK__kobieta__status___5CD6CB2B">
+            <End Role="status_zwiazku" EntitySet="status_zwiazku" />
+            <End Role="kobieta" EntitySet="kobietas" />
+          </AssociationSet>
+          <AssociationSet Name="FK__kobieta__wykszta__5FB337D6" Association="Self.FK__kobieta__wykszta__5FB337D6">
+            <End Role="wyksztalcenie" EntitySet="wyksztalcenies" />
+            <End Role="kobieta" EntitySet="kobietas" />
+          </AssociationSet>
+          <AssociationSet Name="FK__kobieta__Zainter__59FA5E80" Association="Self.FK__kobieta__Zainter__59FA5E80">
+            <End Role="zainteresowanie" EntitySet="zainteresowanies" />
+            <End Role="kobieta" EntitySet="kobietas" />
+          </AssociationSet>
+          <AssociationSet Name="FK__kobieta__Zainter__5AEE82B9" Association="Self.FK__kobieta__Zainter__5AEE82B9">
+            <End Role="zainteresowanie" EntitySet="zainteresowanies" />
+            <End Role="kobieta" EntitySet="kobietas" />
+          </AssociationSet>
+          <AssociationSet Name="FK__kobieta__Zainter__5BE2A6F2" Association="Self.FK__kobieta__Zainter__5BE2A6F2">
+            <End Role="zainteresowanie" EntitySet="zainteresowanies" />
+            <End Role="kobieta" EntitySet="kobietas" />
+          </AssociationSet>
+          <AssociationSet Name="FK__kobieta__znak_zo__5EBF139D" Association="Self.FK__kobieta__znak_zo__5EBF139D">
+            <End Role="znak_zodiaku" EntitySet="znak_zodiaku" />
+            <End Role="kobieta" EntitySet="kobietas" />
+          </AssociationSet>
+          <AssociationSet Name="FK__kobieta__zwierza__60A75C0F" Association="Self.FK__kobieta__zwierza__60A75C0F">
+            <End Role="zwierzatko" EntitySet="zwierzatkoes" />
+            <End Role="kobieta" EntitySet="kobietas" />
+          </AssociationSet>
+          <AssociationSet Name="FK__mezczyzna__papie__571DF1D5" Association="Self.FK__mezczyzna__papie__571DF1D5">
+            <End Role="papierosy" EntitySet="papierosies" />
+            <End Role="mezczyzna" EntitySet="mezczyznas" />
+          </AssociationSet>
+          <AssociationSet Name="FK__mezczyzna__relig__5535A963" Association="Self.FK__mezczyzna__relig__5535A963">
+            <End Role="religia" EntitySet="religias" />
+            <End Role="mezczyzna" EntitySet="mezczyznas" />
+          </AssociationSet>
+          <AssociationSet Name="FK__mezczyzna__statu__5070F446" Association="Self.FK__mezczyzna__statu__5070F446">
+            <End Role="status_zwiazku" EntitySet="status_zwiazku" />
+            <End Role="mezczyzna" EntitySet="mezczyznas" />
+          </AssociationSet>
+          <AssociationSet Name="FK__mezczyzna__wyksz__534D60F1" Association="Self.FK__mezczyzna__wyksz__534D60F1">
+            <End Role="wyksztalcenie" EntitySet="wyksztalcenies" />
+            <End Role="mezczyzna" EntitySet="mezczyznas" />
+          </AssociationSet>
+          <AssociationSet Name="FK__mezczyzna__Zaint__4D94879B" Association="Self.FK__mezczyzna__Zaint__4D94879B">
+            <End Role="zainteresowanie" EntitySet="zainteresowanies" />
+            <End Role="mezczyzna" EntitySet="mezczyznas" />
+          </AssociationSet>
+          <AssociationSet Name="FK__mezczyzna__Zaint__4E88ABD4" Association="Self.FK__mezczyzna__Zaint__4E88ABD4">
+            <End Role="zainteresowanie" EntitySet="zainteresowanies" />
+            <End Role="mezczyzna" EntitySet="mezczyznas" />
+          </AssociationSet>
+          <AssociationSet Name="FK__mezczyzna__Zaint__4F7CD00D" Association="Self.FK__mezczyzna__Zaint__4F7CD00D">
+            <End Role="zainteresowanie" EntitySet="zainteresowanies" />
+            <End Role="mezczyzna" EntitySet="mezczyznas" />
+          </AssociationSet>
+          <AssociationSet Name="FK__mezczyzna__znak___52593CB8" Association="Self.FK__mezczyzna__znak___52593CB8">
+            <End Role="znak_zodiaku" EntitySet="znak_zodiaku" />
+            <End Role="mezczyzna" EntitySet="mezczyznas" />
+          </AssociationSet>
+          <AssociationSet Name="FK__mezczyzna__zwier__5441852A" Association="Self.FK__mezczyzna__zwier__5441852A">
+            <End Role="zwierzatko" EntitySet="zwierzatkoes" />
+            <End Role="mezczyzna" EntitySet="mezczyznas" />
+          </AssociationSet>
+          <AssociationSet Name="FK__placowka__wykszt__3E52440B" Association="Self.FK__placowka__wykszt__3E52440B">
+            <End Role="wyksztalcenie" EntitySet="wyksztalcenies" />
+            <End Role="placowka" EntitySet="placowkas" />
+          </AssociationSet>
+          <FunctionImport Name="FreeGuysFromCracow" IsComposable="true" ReturnType="Collection(dating_app_database_model.FreeGuysFromCracow_Result)">
+            <Parameter Name="ZwiazekID" Mode="In" Type="Byte" />
+            <Parameter Name="ZamieszkanieNazwa" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="ShowZodiacSignOfMen" IsComposable="true" ReturnType="Collection(dating_app_database_model.ShowZodiacSignOfMen_Result)">
+            <Parameter Name="ZodiakNazwa" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="WomenFirstInterest" IsComposable="true" ReturnType="Collection(dating_app_database_model.WomenFirstInterest_Result)">
+            <Parameter Name="ZainteresowanieNazwa" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="BusinessAdd">
+            <Parameter Name="Nazwa" Mode="In" Type="String" />
+            <Parameter Name="NIP" Mode="In" Type="String" />
+            <Parameter Name="KodPocztowy" Mode="In" Type="String" />
+            <Parameter Name="Miasto" Mode="In" Type="String" />
+            <Parameter Name="Adres" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="ManAdd">
+            <Parameter Name="Imie" Mode="In" Type="String" />
+            <Parameter Name="Nazwisko" Mode="In" Type="String" />
+            <Parameter Name="Wiek" Mode="In" Type="Byte" />
+            <Parameter Name="Miejscowosc" Mode="In" Type="String" />
+            <Parameter Name="Zainteresowanie_1" Mode="In" Type="Byte" />
+            <Parameter Name="Zainteresowanie_2" Mode="In" Type="Byte" />
+            <Parameter Name="Zainteresowanie_3" Mode="In" Type="Byte" />
+            <Parameter Name="status_zwiazku_ID" Mode="In" Type="Byte" />
+            <Parameter Name="firma_ID" Mode="In" Type="Byte" />
+            <Parameter Name="znak_zodiaku_ID" Mode="In" Type="Byte" />
+            <Parameter Name="wyksztalcenie_ID" Mode="In" Type="Byte" />
+            <Parameter Name="zwierzatko_ID" Mode="In" Type="Byte" />
+            <Parameter Name="religia_ID" Mode="In" Type="Byte" />
+            <Parameter Name="alkohol_ID" Mode="In" Type="Byte" />
+            <Parameter Name="papierosy_ID" Mode="In" Type="Byte" />
+          </FunctionImport>
+          <FunctionImport Name="UserList" ReturnType="Collection(dating_app_database_model.UserList_Result)">
+            <Parameter Name="Imie" Mode="In" Type="String" />
+            <Parameter Name="Nazwisko" Mode="In" Type="String" />
+            <Parameter Name="Liczba" Mode="InOut" Type="Int32" />
+          </FunctionImport>
+        </EntityContainer>
+        <ComplexType Name="UserList_Result">
+          <Property Type="Byte" Name="ID" Nullable="false" />
+          <Property Type="String" Name="Imie" Nullable="false" MaxLength="20" />
+          <Property Type="String" Name="Nazwisko" Nullable="false" MaxLength="20" />
+          <Property Type="Byte" Name="Wiek" Nullable="false" />
+          <Property Type="String" Name="Miejscowosc" Nullable="false" MaxLength="30" />
+          <Property Type="Byte" Name="Zainteresowanie_1" Nullable="true" />
+          <Property Type="Byte" Name="Zainteresowanie_2" Nullable="true" />
+          <Property Type="Byte" Name="Zainteresowanie_3" Nullable="true" />
+          <Property Type="Byte" Name="status_zwiazku_ID" Nullable="true" />
+          <Property Type="Byte" Name="firma_ID" Nullable="true" />
+          <Property Type="Byte" Name="znak_zodiaku_ID" Nullable="true" />
+          <Property Type="Byte" Name="wyksztalcenie_ID" Nullable="true" />
+          <Property Type="Byte" Name="zwierzatko_ID" Nullable="true" />
+          <Property Type="Byte" Name="religia_ID" Nullable="true" />
+          <Property Type="Byte" Name="alkohol_ID" Nullable="true" />
+          <Property Type="Byte" Name="papierosy_ID" Nullable="true" />
+        </ComplexType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="dating_app_database_modelStoreContainer" CdmEntityContainer="dating_app_databaseEntities">
+          <EntitySetMapping Name="alkohols">
+            <EntityTypeMapping TypeName="dating_app_database_model.alkohol">
+              <MappingFragment StoreEntitySet="alkohol">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Typ" ColumnName="Typ" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="firmas">
+            <EntityTypeMapping TypeName="dating_app_database_model.firma">
+              <MappingFragment StoreEntitySet="firma">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Nazwa" ColumnName="Nazwa" />
+                <ScalarProperty Name="NIP" ColumnName="NIP" />
+                <ScalarProperty Name="KodPocztowy" ColumnName="KodPocztowy" />
+                <ScalarProperty Name="Miasto" ColumnName="Miasto" />
+                <ScalarProperty Name="Adres" ColumnName="Adres" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="gatuneks">
+            <EntityTypeMapping TypeName="dating_app_database_model.gatunek">
+              <MappingFragment StoreEntitySet="gatunek">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Nazwa" ColumnName="Nazwa" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="kobietas">
+            <EntityTypeMapping TypeName="dating_app_database_model.kobieta">
+              <MappingFragment StoreEntitySet="kobieta">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Imie" ColumnName="Imie" />
+                <ScalarProperty Name="Nazwisko" ColumnName="Nazwisko" />
+                <ScalarProperty Name="Wiek" ColumnName="Wiek" />
+                <ScalarProperty Name="Miejscowosc" ColumnName="Miejscowosc" />
+                <ScalarProperty Name="Zainteresowanie_1" ColumnName="Zainteresowanie_1" />
+                <ScalarProperty Name="Zainteresowanie_2" ColumnName="Zainteresowanie_2" />
+                <ScalarProperty Name="Zainteresowanie_3" ColumnName="Zainteresowanie_3" />
+                <ScalarProperty Name="status_zwiazku_ID" ColumnName="status_zwiazku_ID" />
+                <ScalarProperty Name="firma_ID" ColumnName="firma_ID" />
+                <ScalarProperty Name="znak_zodiaku_ID" ColumnName="znak_zodiaku_ID" />
+                <ScalarProperty Name="wyksztalcenie_ID" ColumnName="wyksztalcenie_ID" />
+                <ScalarProperty Name="zwierzatko_ID" ColumnName="zwierzatko_ID" />
+                <ScalarProperty Name="religia_ID" ColumnName="religia_ID" />
+                <ScalarProperty Name="alkohol_ID" ColumnName="alkohol_ID" />
+                <ScalarProperty Name="papierosy_ID" ColumnName="papierosy_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="mezczyznas">
+            <EntityTypeMapping TypeName="dating_app_database_model.mezczyzna">
+              <MappingFragment StoreEntitySet="mezczyzna">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Imie" ColumnName="Imie" />
+                <ScalarProperty Name="Nazwisko" ColumnName="Nazwisko" />
+                <ScalarProperty Name="Wiek" ColumnName="Wiek" />
+                <ScalarProperty Name="Miejscowosc" ColumnName="Miejscowosc" />
+                <ScalarProperty Name="Zainteresowanie_1" ColumnName="Zainteresowanie_1" />
+                <ScalarProperty Name="Zainteresowanie_2" ColumnName="Zainteresowanie_2" />
+                <ScalarProperty Name="Zainteresowanie_3" ColumnName="Zainteresowanie_3" />
+                <ScalarProperty Name="status_zwiazku_ID" ColumnName="status_zwiazku_ID" />
+                <ScalarProperty Name="firma_ID" ColumnName="firma_ID" />
+                <ScalarProperty Name="znak_zodiaku_ID" ColumnName="znak_zodiaku_ID" />
+                <ScalarProperty Name="wyksztalcenie_ID" ColumnName="wyksztalcenie_ID" />
+                <ScalarProperty Name="zwierzatko_ID" ColumnName="zwierzatko_ID" />
+                <ScalarProperty Name="religia_ID" ColumnName="religia_ID" />
+                <ScalarProperty Name="alkohol_ID" ColumnName="alkohol_ID" />
+                <ScalarProperty Name="papierosy_ID" ColumnName="papierosy_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="papierosies">
+            <EntityTypeMapping TypeName="dating_app_database_model.papierosy">
+              <MappingFragment StoreEntitySet="papierosy">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Typ" ColumnName="Typ" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="placowkas">
+            <EntityTypeMapping TypeName="dating_app_database_model.placowka">
+              <MappingFragment StoreEntitySet="placowka">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Nazwa" ColumnName="Nazwa" />
+                <ScalarProperty Name="wyksztalcenie_ID" ColumnName="wyksztalcenie_ID" />
+                <ScalarProperty Name="KodPocztowy" ColumnName="KodPocztowy" />
+                <ScalarProperty Name="Miasto" ColumnName="Miasto" />
+                <ScalarProperty Name="Adres" ColumnName="Adres" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="religias">
+            <EntityTypeMapping TypeName="dating_app_database_model.religia">
+              <MappingFragment StoreEntitySet="religia">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Nazwa" ColumnName="Nazwa" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="status_zwiazku">
+            <EntityTypeMapping TypeName="dating_app_database_model.status_zwiazku">
+              <MappingFragment StoreEntitySet="status_zwiazku">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Rodzaj" ColumnName="Rodzaj" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="wyksztalcenies">
+            <EntityTypeMapping TypeName="dating_app_database_model.wyksztalcenie">
+              <MappingFragment StoreEntitySet="wyksztalcenie">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Rodzaj" ColumnName="Rodzaj" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="zainteresowanies">
+            <EntityTypeMapping TypeName="dating_app_database_model.zainteresowanie">
+              <MappingFragment StoreEntitySet="zainteresowanie">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Nazwa" ColumnName="Nazwa" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="znak_zodiaku">
+            <EntityTypeMapping TypeName="dating_app_database_model.znak_zodiaku">
+              <MappingFragment StoreEntitySet="znak_zodiaku">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Nazwa" ColumnName="Nazwa" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="zwierzatkoes">
+            <EntityTypeMapping TypeName="dating_app_database_model.zwierzatko">
+              <MappingFragment StoreEntitySet="zwierzatko">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Gatunek_ID" ColumnName="Gatunek_ID" />
+                <ScalarProperty Name="Imie" ColumnName="Imie" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionName="dating_app_database_model.Store.FreeGuysFromCracow" FunctionImportName="FreeGuysFromCracow">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="dating_app_database_model.FreeGuysFromCracow_Result">
+                <ScalarProperty Name="Imie" ColumnName="Imie" />
+                <ScalarProperty Name="Nazwisko" ColumnName="Nazwisko" />
+                <ScalarProperty Name="Miejscowosc" ColumnName="Miejscowosc" />
+                <ScalarProperty Name="Rodzaj" ColumnName="Rodzaj" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionName="dating_app_database_model.Store.ShowZodiacSignOfMen" FunctionImportName="ShowZodiacSignOfMen">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="dating_app_database_model.ShowZodiacSignOfMen_Result">
+                <ScalarProperty Name="Imie" ColumnName="Imie" />
+                <ScalarProperty Name="Nazwisko" ColumnName="Nazwisko" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Nazwa" ColumnName="Nazwa" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionName="dating_app_database_model.Store.WomenFirstInterest" FunctionImportName="WomenFirstInterest">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="dating_app_database_model.WomenFirstInterest_Result">
+                <ScalarProperty Name="Imie" ColumnName="Imie" />
+                <ScalarProperty Name="Nazwisko" ColumnName="Nazwisko" />
+                <ScalarProperty Name="Zainteresowanie_1" ColumnName="Zainteresowanie_1" />
+                <ScalarProperty Name="Nazwa" ColumnName="Nazwa" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="BusinessAdd" FunctionName="dating_app_database_model.Store.BusinessAdd" />
+          <FunctionImportMapping FunctionImportName="ManAdd" FunctionName="dating_app_database_model.Store.ManAdd" />
+          <FunctionImportMapping FunctionImportName="UserList" FunctionName="dating_app_database_model.Store.UserList">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="dating_app_database_model.UserList_Result">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Imie" ColumnName="Imie" />
+                <ScalarProperty Name="Nazwisko" ColumnName="Nazwisko" />
+                <ScalarProperty Name="Wiek" ColumnName="Wiek" />
+                <ScalarProperty Name="Miejscowosc" ColumnName="Miejscowosc" />
+                <ScalarProperty Name="Zainteresowanie_1" ColumnName="Zainteresowanie_1" />
+                <ScalarProperty Name="Zainteresowanie_2" ColumnName="Zainteresowanie_2" />
+                <ScalarProperty Name="Zainteresowanie_3" ColumnName="Zainteresowanie_3" />
+                <ScalarProperty Name="status_zwiazku_ID" ColumnName="status_zwiazku_ID" />
+                <ScalarProperty Name="firma_ID" ColumnName="firma_ID" />
+                <ScalarProperty Name="znak_zodiaku_ID" ColumnName="znak_zodiaku_ID" />
+                <ScalarProperty Name="wyksztalcenie_ID" ColumnName="wyksztalcenie_ID" />
+                <ScalarProperty Name="zwierzatko_ID" ColumnName="zwierzatko_ID" />
+                <ScalarProperty Name="religia_ID" ColumnName="religia_ID" />
+                <ScalarProperty Name="alkohol_ID" ColumnName="alkohol_ID" />
+                <ScalarProperty Name="papierosy_ID" ColumnName="papierosy_ID" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

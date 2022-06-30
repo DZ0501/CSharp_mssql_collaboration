@@ -1,0 +1,16 @@
+﻿<Window x:Class="Base.window_women_decision"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Base"
+        mc:Ignorable="d"
+        Title="window_women_decision" Height="450" Width="800">
+    <Grid>
+        <Label Content="What do You want to do?" Margin="249,48,249,313" FontFamily="Times New Roman" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center" Height="58" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Width="294"/>
+        <Button Content="List Women." Margin="307,121,307,241" Click="Button_Click" FontFamily="Times New Roman" FontSize="18"/>
+        <Button Content="Add Women." Margin="307,205,307,157" Click="Button_Click_2" FontFamily="Times New Roman" FontSize="18"/>
+        <Button Content="Delete Women." Margin="307,289,307,73" Click="Button_Click_3" FontFamily="Times New Roman" FontSize="18"/>
+
+    </Grid>
+</Window>
