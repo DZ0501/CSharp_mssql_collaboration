@@ -8,6 +8,7 @@
         Title="window_women_list" Height="450" Width="800">
     <Grid>
         <DataGrid x:Name="grid_women"/>
+        <Button Content="&lt;&lt;&lt;" HorizontalAlignment="Left" VerticalAlignment="Top" Width="157" Margin="22,343,0,0" Height="42" Click="Button_Click_1"/>
 
     </Grid>
 </Window>

@@ -27,6 +27,7 @@ namespace Base
             var women = from w in db.kobietas
                         select new
                         {
+                            ID = w.ID,
                             Imię = w.Imie,
                             Nazwisko = w.Nazwisko,
                             Wiek = w.Wiek,
@@ -39,6 +40,13 @@ namespace Base
         private void Button_Click(object sender, RoutedEventArgs e)
         {
 
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            window_women_decision window_Women_Decision = new window_women_decision();
+            window_Women_Decision.Show();
+            this.Close();
         }
     }
 }

@@ -1,0 +1,22 @@
+﻿<Window x:Class="Base.window_women_add"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Base"
+        mc:Ignorable="d"
+        Title="window_women_add" Height="450" Width="800">
+    <Grid>
+        <TextBox x:Name="txtName" TextWrapping="Wrap" Text="" Margin="392,99,272,291"/>
+        <TextBox x:Name="txtSurname" TextWrapping="Wrap" Text="" Margin="392,147,272,243"/>
+        <TextBox x:Name="txtAge" TextWrapping="Wrap" Text="" Margin="392,195,272,195"/>
+        <TextBox x:Name="txtDomicility" TextWrapping="Wrap" Text="" Margin="392,243,272,147"/>
+        <Button Content="Add!" HorizontalAlignment="Left" VerticalAlignment="Top" Width="128" Margin="332,306,0,0" FontWeight="Bold" Height="34" Click="Button_Click"/>
+        <Label Content="Name" HorizontalAlignment="Left" Margin="284,99,0,0" VerticalAlignment="Top" Width="79" Height="29" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+        <Label Content="Surname" HorizontalAlignment="Left" Margin="284,147,0,0" VerticalAlignment="Top" Width="79" Height="29" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+        <Label Content="Age" HorizontalAlignment="Left" Margin="284,195,0,0" VerticalAlignment="Top" Width="79" Height="29" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+        <Label Content="Domicility" HorizontalAlignment="Left" Margin="284,243,0,0" VerticalAlignment="Top" Width="79" Height="29" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+        <Button Content="&lt;&lt;&lt;" HorizontalAlignment="Left" VerticalAlignment="Top" Width="157" Margin="22,343,0,0" Height="42" Click="Button_Click_1"/>
+
+    </Grid>
+</Window>

@@ -26,12 +26,16 @@ namespace Base
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-
+            window_women_list window_women_List = new window_women_list();
+            window_women_List.Show();
+            this.Close();
         }
 
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
-
+            window_women_add window_women_Add = new window_women_add();
+            window_women_Add.Show();
+            this.Close();
         }
 
         private void Button_Click_3(object sender, RoutedEventArgs e)

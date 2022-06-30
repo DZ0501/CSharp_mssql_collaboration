@@ -123,16 +123,19 @@
     <Compile Include="UserList_Result.cs">
       <DependentUpon>dating_app_database_models.tt</DependentUpon>
     </Compile>
-    <Compile Include="window_start_decision.xaml.cs">
+    <Compile Include="Windows\window_start_decision.xaml.cs">
       <DependentUpon>window_start_decision.xaml</DependentUpon>
     </Compile>
-    <Compile Include="window_start.xaml.cs">
+    <Compile Include="Windows\window_start.xaml.cs">
       <DependentUpon>window_start.xaml</DependentUpon>
     </Compile>
-    <Compile Include="window_women_decision.xaml.cs">
+    <Compile Include="Windows\window_women_add.xaml.cs">
+      <DependentUpon>window_women_add.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\window_women_decision.xaml.cs">
       <DependentUpon>window_women_decision.xaml</DependentUpon>
     </Compile>
-    <Compile Include="window_women_list.xaml.cs">
+    <Compile Include="Windows\window_women_list.xaml.cs">
       <DependentUpon>window_women_list.xaml</DependentUpon>
     </Compile>
     <Compile Include="WomenFirstInterest_Result.cs">
@@ -150,7 +153,7 @@
     <Compile Include="zwierzatko.cs">
       <DependentUpon>dating_app_database_models.tt</DependentUpon>
     </Compile>
-    <Page Include="MainWindow.xaml">
+    <Page Include="Windows\MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -168,23 +171,27 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>dating_app_database_models.edmx</DependentUpon>
     </Compile>
-    <Compile Include="MainWindow.xaml.cs">
+    <Compile Include="Windows\MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="window_start_decision.xaml">
+    <Page Include="Windows\window_start_decision.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="window_start.xaml">
+    <Page Include="Windows\window_start.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="window_women_decision.xaml">
+    <Page Include="Windows\window_women_add.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="window_women_list.xaml">
+    <Page Include="Windows\window_women_decision.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\window_women_list.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -214,7 +221,7 @@
     <None Include="dating_app_database_models.edmx.diagram">
       <DependentUpon>dating_app_database_models.edmx</DependentUpon>
     </None>
-    <None Include="packages.config" />
+    <None Include="Windows\packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
