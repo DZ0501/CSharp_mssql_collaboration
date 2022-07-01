@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Base.Windows;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -28,6 +29,13 @@ namespace Base
         {
             window_women_decision window_women_Decision = new window_women_decision();
             window_women_Decision.Show();
+            this.Close();
+        }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            window_men_decision window_men_Decision = new window_men_decision();
+            window_men_Decision.Show();
             this.Close();
         }
     }

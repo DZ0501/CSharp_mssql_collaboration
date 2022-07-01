@@ -123,6 +123,18 @@
     <Compile Include="UserList_Result.cs">
       <DependentUpon>dating_app_database_models.tt</DependentUpon>
     </Compile>
+    <Compile Include="Windows\window_men_add.xaml.cs">
+      <DependentUpon>window_men_add.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\window_men_decision.xaml.cs">
+      <DependentUpon>window_men_decision.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\window_men_del.xaml.cs">
+      <DependentUpon>window_men_del.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\window_men_list.xaml.cs">
+      <DependentUpon>window_men_list.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Windows\window_start_decision.xaml.cs">
       <DependentUpon>window_start_decision.xaml</DependentUpon>
     </Compile>
@@ -137,6 +149,9 @@
     </Compile>
     <Compile Include="Windows\window_women_list.xaml.cs">
       <DependentUpon>window_women_list.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\window_women_del.xaml.cs">
+      <DependentUpon>window_women_del.xaml</DependentUpon>
     </Compile>
     <Compile Include="WomenFirstInterest_Result.cs">
       <DependentUpon>dating_app_database_models.tt</DependentUpon>
@@ -153,10 +168,6 @@
     <Compile Include="zwierzatko.cs">
       <DependentUpon>dating_app_database_models.tt</DependentUpon>
     </Compile>
-    <Page Include="Windows\MainWindow.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -171,10 +182,22 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>dating_app_database_models.edmx</DependentUpon>
     </Compile>
-    <Compile Include="Windows\MainWindow.xaml.cs">
-      <DependentUpon>MainWindow.xaml</DependentUpon>
-      <SubType>Code</SubType>
-    </Compile>
+    <Page Include="Windows\window_men_add.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\window_men_decision.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\window_men_del.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\window_men_list.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Windows\window_start_decision.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -192,6 +215,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Windows\window_women_list.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\window_women_del.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
